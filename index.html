@@ -35,6 +35,7 @@
     </script>
 
     <style>
+        /* Custom Polka Dot Background */
         .polka-dot-bg {
             background-color: #FFCBE1;
             background-image: radial-gradient(#D68BAA 18%, transparent 18%);
@@ -42,12 +43,14 @@
             background-position: 0 0, 21px 21px;
         }
 
+        /* Glassmorphism Navigation */
         .glass-nav {
             background: rgba(255, 255, 255, 0.88);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
 
+        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
@@ -67,6 +70,7 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.15);
         }
 
+        /* Toast Animation */
         @keyframes slideInUp {
             from {
                 transform: translateY(100%);
@@ -98,6 +102,7 @@
 
             <!-- Desktop Menu Navigation -->
             <nav class="hidden md:flex items-center space-x-8">
+                <!-- Homepage Dropdown -->
                 <div class="relative group">
                     <button class="flex items-center space-x-1 font-medium text-gray-700 group-hover:text-pink-600 py-2 transition">
                         <span>Homepage</span>
@@ -110,6 +115,7 @@
                     </div>
                 </div>
 
+                <!-- My Wardrobe Dropdown -->
                 <div class="relative group">
                     <button class="flex items-center space-x-1 font-medium text-gray-700 group-hover:text-pink-600 py-2 transition">
                         <span>My Wardrobe</span>
@@ -131,6 +137,7 @@
                     </div>
                 </div>
 
+                <!-- Outfit Planner Dropdown -->
                 <div class="relative group">
                     <button class="flex items-center space-x-1 font-medium text-gray-700 group-hover:text-pink-600 py-2 transition">
                         <span>Outfit Planner</span>
@@ -151,6 +158,7 @@
 
             <!-- Header Action Icons -->
             <div class="flex items-center space-x-4">
+                <!-- Tombol Akses Akun di Navbar -->
                 <div id="authNavContainer" class="flex items-center space-x-3">
                     <div class="flex items-center space-x-2">
                         <button onclick="openAuthModal('signin')" class="px-3 py-1.5 text-xs font-bold text-gray-800 hover:text-pink-600 transition">
@@ -161,6 +169,7 @@
                         </button>
                     </div>
                 </div>
+                <!-- Mobile Hamburger Button -->
                 <button onclick="toggleMobileMenu()" class="md:hidden text-gray-800 hover:text-pink-600 focus:outline-none p-2">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
@@ -195,11 +204,14 @@
 
     <!-- MAIN CONTENT -->
     <main class="flex-grow">
+
+        <!-- 1. HERO SECTION -->
         <section id="hero" class="relative bg-gray-100 overflow-hidden min-h-[500px] lg:min-h-[580px] flex items-center">
             <div class="absolute inset-0 z-0">
                 <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=2000&auto=format&fit=crop" 
                      alt="Fashion Background Models" 
-                     class="w-full h-full object-cover object-top opacity-85 filter brightness-95" />
+                     class="w-full h-full object-cover object-top opacity-85 filter brightness-95" 
+                     onerror="this.onerror=null; this.src='https://placehold.co/1920x800/EAD3DF/333333?text=ReWear+Fashion+Lookbook';" />
                 <div class="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent sm:w-2/3"></div>
             </div>
 
@@ -229,14 +241,17 @@
             </div>
         </section>
 
+        <!-- 2. ABOUT US SECTION -->
         <section id="about" class="polka-dot-bg py-20 px-4 sm:px-6 lg:px-8 text-center border-y border-pink-200/50">
             <div class="max-w-3xl mx-auto">
                 <span class="font-script text-5xl sm:text-6xl text-gray-900 block mb-2 leading-none drop-shadow-sm">
                     About us
                 </span>
+                
                 <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight mb-6">
                     Wear It Your Way.
                 </h2>
+                
                 <p class="text-base sm:text-xl text-gray-800 leading-relaxed font-medium">
                     Mix, match, and make the most of every piece in your closet. <br class="hidden sm:inline"/>
                     Your next favorite outfit starts here.
@@ -244,6 +259,7 @@
             </div>
         </section>
 
+        <!-- 3. OUR FEATURES SECTION -->
         <section id="features" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
@@ -253,117 +269,133 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                
+                <!-- Feature 1: My Wardrobe Card -->
                 <div class="bg-brandPinkLight rounded-3xl p-8 border border-pink-200 shadow-xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
                     <div class="w-full">
                         <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-6">
                             My Wardrobe
                         </h3>
+                        
                         <div class="bg-white/80 rounded-2xl p-6 min-h-[260px] flex items-center justify-center mb-8 border border-pink-100 shadow-inner overflow-hidden relative">
                             <div class="grid grid-cols-3 gap-3 w-full max-w-xs items-center">
                                 <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/1000304688.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105" alt="Headwear">
-                                <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/hqnk6vhexm6mi3y5qxdo.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105" alt="T-Shirt">
-                                <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/Gelang_Pria_Wanita_Hip_Hop_Retro_Star_Leather_Bracelet.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105" alt="Necklace">
-                                <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/download_2.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105" alt="Jeans">
-                                <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/__%EF%BE%9F___%EF%BE%9F.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105" alt="Shoes">
-                                <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/Guido_Maria_Kretschmer_Kette.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105" alt="Bracelet">
+                                <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/hqnk6vhexm6mi3y5qxdo.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105 delay-75" alt="T-Shirt">
+                                <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/Gelang_Pria_Wanita_Hip_Hop_Retro_Star_Leather_Bracelet.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105 delay-100" alt="Necklace">
+                                <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/download_2.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105 delay-150" alt="Jeans">
+                                <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/__%EF%BE%9F___%EF%BE%9F.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105 delay-200" alt="Shoes">
+                                <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/Guido_Maria_Kretschmer_Kette.jpg" class="w-full h-20 object-contain rounded-lg bg-pink-50 p-1 shadow-sm transition group-hover:scale-105 delay-300" alt="Bracelet">
                             </div>
                         </div>
                     </div>
+
                     <div class="w-full space-y-2">
-                        <button onclick="openWardrobeModal()" class="w-full sm:w-auto px-8 py-3.5 bg-black text-white font-black text-sm tracking-widest uppercase rounded-xl hover:bg-gray-800 transition-all shadow-md">
+                        <button onclick="openWardrobeModal()" class="w-full sm:w-auto px-8 py-3.5 bg-black text-white font-black text-sm tracking-widest uppercase rounded-xl hover:bg-gray-800 active:scale-95 transition-all shadow-md hover:shadow-lg">
                             SCAN NOW!
                         </button>
-                        <p class="text-sm font-semibold text-gray-700">Organize your closet.</p>
+                        <p class="text-sm font-semibold text-gray-700">
+                            Organize your closet.
+                        </p>
                     </div>
                 </div>
 
+                <!-- Feature 2: Outfit Planner Card -->
                 <div class="bg-brandPinkLight rounded-3xl p-8 border border-pink-200 shadow-xl flex flex-col justify-between items-center text-center transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 group">
                     <div class="w-full">
                         <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-6">
                             Outfit Planner
                         </h3>
+                        
                         <div class="bg-white/80 rounded-2xl p-6 min-h-[260px] flex items-center justify-center mb-8 border border-pink-100 shadow-inner relative">
                             <div class="relative flex flex-col items-center">
                                 <div class="w-36 h-40 bg-gray-900 rounded-3xl flex items-center justify-center shadow-md relative transform group-hover:scale-105 transition">
+                                    <svg class="w-16 h-12 absolute -top-1 text-white opacity-20" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 3L2 8v10h16V8l-8-5z"/>
+                                    </svg>
                                     <i class="fa-solid fa-shirt text-4xl text-pink-300"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="w-full space-y-2">
-                        <button onclick="openPlannerModal()" class="w-full sm:w-auto px-8 py-3.5 bg-black text-white font-black text-sm tracking-widest uppercase rounded-xl hover:bg-gray-800 transition-all shadow-md">
+                        <button onclick="openPlannerModal()" class="w-full sm:w-auto px-8 py-3.5 bg-black text-white font-black text-sm tracking-widest uppercase rounded-xl hover:bg-gray-800 active:scale-95 transition-all shadow-md hover:shadow-lg">
                             START STYLING
                         </button>
-                        <p class="text-sm font-semibold text-gray-700">Create your next look.</p>
+                        <p class="text-sm font-semibold text-gray-700">
+                            Create your next look.
+                        </p>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- ABOUT US TEAM SECTION -->
+        <!-- ABOUT US TEAM -->
         <section id="about-team" class="bg-white py-10 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-6xl mx-auto text-center">
-                <span class="inline-block bg-brandPink text-gray-900 text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full">
-                    About Us
-                </span>
-                <h2 class="mt-3 text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
-                    Meet the ReWear Team
-                </h2>
-                <p class="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-gray-600">
-                    We're a group of students who believe great style doesn't have to cost the planet.
-                    ReWear helps you rediscover, restyle, and rewear the clothes you already love.
-                </p>
+          <div class="max-w-6xl mx-auto text-center">
+            <span class="inline-block bg-brandPink text-gray-900 text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full">
+              About Us
+            </span>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+              Meet the ReWear Team
+            </h2>
+            <p class="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-gray-600">
+              We're a group of students who believe great style doesn't have to cost the planet.
+              ReWear helps you rediscover, restyle, and rewear the clothes you already love.
+            </p>
 
-                <div class="mt-8 flex flex-wrap justify-center gap-4 sm:gap-6 max-w-[800px] mx-auto">
-                    <div class="group flex flex-col items-center w-28 sm:w-32">
-                        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg">
-                            <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.35.jpg" alt="Ratu" class="w-full h-full object-cover rounded-full border-2 border-white">
-                        </div>
-                        <h3 class="mt-2 text-sm font-semibold text-gray-900">Ratu Raisyha Adha</h3>
-                        <p class="text-[11px] text-pink-500 font-medium">UI Designer - 2606810361</p>
-                    </div>
-
-                    <div class="group flex flex-col items-center w-28 sm:w-32">
-                        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg">
-                            <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.35_1.jpg" alt="Savinna" class="w-full h-full object-cover rounded-full border-2 border-white">
-                        </div>
-                        <h3 class="mt-2 text-sm font-semibold text-gray-900">Savinna Dyandra</h3>
-                        <p class="text-[11px] text-pink-500 font-medium">Product Manager - 2606810405</p>
-                    </div>
-
-                    <div class="group flex flex-col items-center w-28 sm:w-32">
-                        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg">
-                            <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.34.jpg" alt="Simphony" class="w-full h-full object-cover rounded-full border-2 border-white">
-                        </div>
-                        <h3 class="mt-2 text-sm font-semibold text-gray-900">Simphony Grace</h3>
-                        <p class="text-[11px] text-pink-500 font-medium">Engineers - 2606752708</p>
-                    </div>
-
-                    <div class="group flex flex-col items-center w-28 sm:w-32">
-                        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg">
-                            <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.36.jpg" alt="Siti" class="w-full h-full object-cover rounded-full border-2 border-white">
-                        </div>
-                        <h3 class="mt-2 text-sm font-semibold text-gray-900">Siti Marwah</h3>
-                        <p class="text-[11px] text-pink-500 font-medium">Engineers - 2606810424</p>
-                    </div>
-
-                    <div class="group flex flex-col items-center w-28 sm:w-32">
-                        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg">
-                            <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.34_1.jpg" alt="Teuku" class="w-full h-full object-cover rounded-full border-2 border-white">
-                        </div>
-                        <h3 class="mt-2 text-sm font-semibold text-gray-900">Teuku Alief</h3>
-                        <p class="text-[11px] text-pink-500 font-medium">Engineers - 2606810456</p>
-                    </div>
-
-                    <div class="group flex flex-col items-center w-28 sm:w-32">
-                        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg">
-                            <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.36_1.jpg" alt="Yasmin" class="w-full h-full object-cover rounded-full border-2 border-white">
-                        </div>
-                        <h3 class="mt-2 text-sm font-semibold text-gray-900">Yasmin Al Mumtazah</h3>
-                        <p class="text-[11px] text-pink-500 font-medium">Engineers - 2606753061</p>
-                    </div>
+            <!-- Foto Anggota -->
+            <div class="mt-8 flex flex-wrap justify-center gap-4 sm:gap-6 max-w-[800px] mx-auto">
+              <div class="group flex flex-col items-center w-28 sm:w-32">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg transition duration-300 group-hover:scale-105">
+                  <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.35.jpg" alt="Ratu" class="w-full h-full object-cover rounded-full border-2 border-white">
                 </div>
+                <h3 class="mt-2 text-sm font-semibold text-gray-900">Ratu Raisyha Adha</h3>
+                <p class="text-[11px] text-pink-500 font-medium">UI Designer - 2606810361</p>
+              </div>
+
+              <div class="group flex flex-col items-center w-28 sm:w-32">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg transition duration-300 group-hover:scale-105">
+                  <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.35_1.jpg" alt="Savinna" class="w-full h-full object-cover rounded-full border-2 border-white">
+                </div>
+                <h3 class="mt-2 text-sm font-semibold text-gray-900">Savinna Dyandra</h3>
+                <p class="text-[11px] text-pink-500 font-medium">Product Manager - 2606810405</p>
+              </div>
+
+              <div class="group flex flex-col items-center w-28 sm:w-32">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg transition duration-300 group-hover:scale-105">
+                  <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.34.jpg" alt="Simphony" class="w-full h-full object-cover rounded-full border-2 border-white">
+                </div>
+                <h3 class="mt-2 text-sm font-semibold text-gray-900">Simphony Grace</h3>
+                <p class="text-[11px] text-pink-500 font-medium">Engineers - 2606752708</p>
+              </div>
+
+              <div class="group flex flex-col items-center w-28 sm:w-32">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg transition duration-300 group-hover:scale-105">
+                  <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.36.jpg" alt="Siti" class="w-full h-full object-cover rounded-full border-2 border-white">
+                </div>
+                <h3 class="mt-2 text-sm font-semibold text-gray-900">Siti Marwah</h3>
+                <p class="text-[11px] text-pink-500 font-medium">Engineers - 2606810424</p>
+              </div>
+
+              <div class="group flex flex-col items-center w-28 sm:w-32">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg transition duration-300 group-hover:scale-105">
+                  <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.34_1.jpg" alt="Teuku" class="w-full h-full object-cover rounded-full border-2 border-white">
+                </div>
+                <h3 class="mt-2 text-sm font-semibold text-gray-900">Teuku Alief</h3>
+                <p class="text-[11px] text-pink-500 font-medium">Engineers - 2606810456</p>
+              </div>
+
+              <div class="group flex flex-col items-center w-28 sm:w-32">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-0.5 bg-gradient-to-tr from-pink-300 to-pink-500 shadow-lg transition duration-300 group-hover:scale-105">
+                  <img src="https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-08_at_22.53.36_1.jpg" alt="Yasmin" class="w-full h-full object-cover rounded-full border-2 border-white">
+                </div>
+                <h3 class="mt-2 text-sm font-semibold text-gray-900">Yasmin Al Mumtazah</h3>
+                <p class="text-[11px] text-pink-500 font-medium">Engineers - 2606753061</p>
+              </div>
             </div>
+          </div>
         </section>
     </main>
 
@@ -382,6 +414,7 @@
         </div>
     </footer>
 
+
     <!-- MODAL 1: MY WARDROBE (SCAN & UPLOAD ITEM) -->
     <div id="wardrobeModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-pink-100 max-h-[90vh] overflow-y-auto">
@@ -397,6 +430,7 @@
                 <p class="text-xs text-gray-500 mt-1">Upload foto pakaian atau aksesoris untuk disimpan di lemari digital Anda.</p>
             </div>
 
+            <!-- Upload Area -->
             <div id="dropArea" class="border-2 border-dashed border-pink-300 rounded-2xl p-6 text-center hover:bg-pink-50/50 transition cursor-pointer mb-4" onclick="document.getElementById('itemImageInput').click()">
                 <i class="fa-solid fa-cloud-arrow-up text-3xl text-pink-400 mb-2"></i>
                 <p class="text-sm font-medium text-gray-700">Klik atau tarik foto item ke sini</p>
@@ -404,11 +438,12 @@
                 <input type="file" id="itemImageInput" accept="image/*" class="hidden" onchange="previewUploadedImage(event)">
             </div>
 
-            <div id="imagePreviewContainer" class="hidden mb-4 text-center relative">
+            <!-- Image Preview Box -->
+            <div id="imagePreviewContainer" class="hidden mb-4 text-center">
                 <img id="imagePreview" src="#" alt="Preview" class="h-40 mx-auto rounded-xl object-cover border border-pink-200">
-                <button type="button" onclick="resetUploadedImage()" class="mt-2 text-xs text-red-500 hover:underline">Hapus Foto</button>
             </div>
 
+            <!-- Category Form -->
             <div class="space-y-4 text-left">
                 <div>
                     <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Item</label>
@@ -423,6 +458,7 @@
                             <option value="accessories">Aksesoris (Accessories)</option>
                             <option value="tops">Atasan (Tops)</option>
                             <option value="bottoms">Bawahan (Bottoms)</option>
+                            <option value="dresses">Dress / One Piece</option>
                             <option value="shoes">Sepatu / Alas Kaki</option>
                         </select>
                     </div>
@@ -432,16 +468,19 @@
                     </div>
                 </div>
 
+                <!-- Style Item -->
                 <div>
                     <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Style Item</label>
-                    <select id="itemStyle" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-pink-400 text-sm"></select>
+                    <select id="itemStyle" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm"></select>
+                    <p class="text-[11px] text-gray-500 mt-2">Contoh awal: Casual dan Formal. Kamu bisa menambah atau menghapus kategori style.</p>
                     <div class="flex gap-2 mt-2">
-                        <input id="newStyleName" type="text" placeholder="Tambah style baru..." class="min-w-0 flex-1 px-3 py-2 rounded-lg border border-gray-200 text-xs focus:outline-none focus:ring-2 focus:ring-pink-400">
-                        <button type="button" onclick="addStyleCategory()" class="px-3 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg text-xs font-bold transition">Tambah</button>
+                        <input id="newStyleName" type="text" placeholder="Tambah style..." class="min-w-0 flex-1 px-3 py-2 rounded-lg border border-gray-200 text-xs">
+                        <button type="button" onclick="addStyleCategory()" class="px-3 py-2 bg-pink-500 text-white rounded-lg text-xs font-bold">Tambah</button>
                     </div>
                     <div id="styleCategoryList" class="flex flex-wrap gap-2 mt-2"></div>
                 </div>
 
+                <!-- Sub-type hint for accessories -->
                 <div id="accessoryHint" class="hidden text-xs bg-pink-50 p-2.5 rounded-xl border border-pink-200 text-pink-700">
                     <span class="font-bold"><i class="fa-solid fa-gem mr-1"></i> Tipe Aksesoris:</span>
                     Bisa berupa Gelang, Kalung, Gesper/Ikat Pinggang, Anting, Cincin, atau Syal.
@@ -454,672 +493,967 @@
         </div>
     </div>
 
+
     <!-- MODAL 2: MY WARDROBE GALLERY VIEW -->
     <div id="wardrobeViewModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl relative border border-pink-100 max-h-[90vh] flex flex-col">
             <button onclick="closeWardrobeViewModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
-
-            <div class="text-center mb-4">
+ 
+            <div class="text-left mb-4">
                 <h3 class="text-2xl font-bold text-gray-900">Koleksi Lemari Saya</h3>
-                <p class="text-xs text-gray-500 mt-1">Daftar semua item pakaian dan aksesoris yang tersimpan.</p>
+                <p class="text-xs text-gray-500">Daftar item pakaian dan aksesoris yang tersimpan di ReWear.</p>
             </div>
 
-            <div class="flex flex-wrap gap-2 justify-center mb-6">
-                <button onclick="filterWardrobeView('all')" class="px-3 py-1.5 rounded-full text-xs font-bold bg-pink-500 text-white">Semua</button>
-                <button onclick="filterWardrobeView('headwear')" class="px-3 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-700 hover:bg-pink-100">Headwear</button>
-                <button onclick="filterWardrobeView('accessories')" class="px-3 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-700 hover:bg-pink-100">Accessories</button>
-                <button onclick="filterWardrobeView('tops')" class="px-3 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-700 hover:bg-pink-100">Tops</button>
-                <button onclick="filterWardrobeView('bottoms')" class="px-3 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-700 hover:bg-pink-100">Bottoms</button>
-                <button onclick="filterWardrobeView('shoes')" class="px-3 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-700 hover:bg-pink-100">Shoes</button>
+            <!-- Filter Tabs -->
+            <div id="filterTabs" class="flex space-x-2 border-b border-gray-100 pb-3 mb-4 overflow-x-auto text-nowrap">
+                <button onclick="filterWardrobe('all', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-pink-500 text-white transition">Semua</button>
+                <button onclick="filterWardrobe('headwear', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Atasan Kepala</button>
+                <button onclick="filterWardrobe('accessories', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Aksesoris</button>
+                <button onclick="filterWardrobe('tops', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Atasan</button>
+                <button onclick="filterWardrobe('bottoms', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Bawahan</button>
+                <button onclick="filterWardrobe('dresses', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Dress</button>
+                <button onclick="filterWardrobe('shoes', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Sepatu</button>
             </div>
 
-            <div id="wardrobeGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 overflow-y-auto p-2 flex-grow"></div>
+            <!-- Items Grid -->
+            <div id="wardrobeGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 overflow-y-auto p-1 flex-grow">
+                <!-- Dynamically Rendered items -->
+            </div>
         </div>
     </div>
 
-    <!-- MODAL 3: STYLE CATEGORIZE -->
+
+    <!-- MODAL: STYLE CATEGORIZE -->
     <div id="styleCategorizeModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative border border-pink-100 max-h-[90vh] flex flex-col">
+        <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl relative border border-pink-100 max-h-[90vh] flex flex-col">
             <button onclick="closeStyleCategorizeModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
 
-            <div class="text-center mb-6">
-                <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
-                    <i class="fa-solid fa-tags"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-gray-900">Style Categorize</h3>
-                <p class="text-xs text-gray-500 mt-1">Kelola dan lihat pakaian Anda berdasarkan kategori style.</p>
+            <div class="text-left mb-4 pr-10">
+                <h3 class="text-2xl font-bold text-gray-900"><i class="fa-solid fa-tags text-pink-500 mr-2"></i>Style Categorize</h3>
+                <p class="text-xs text-gray-500 mt-1">Pakaian dan aksesoris di lemarimu dikelompokkan berdasarkan style yang kamu input saat Scan New Clothes.</p>
             </div>
 
-            <div class="flex gap-2 mb-6">
-                <input id="newStyleInputCategorize" type="text" placeholder="Buat style baru..." class="min-w-0 flex-1 px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400">
-                <button onclick="addStyleCategoryFromCategorize()" class="px-4 py-2.5 bg-pink-500 hover:bg-pink-600 text-white rounded-xl text-xs font-bold transition">Tambah Style</button>
-            </div>
+            <!-- Style Filter Chips -->
+            <div id="styleFilterChips" class="flex space-x-2 border-b border-gray-100 pb-3 mb-4 overflow-x-auto text-nowrap"></div>
 
-            <div id="styleCategorizeContainer" class="space-y-6 overflow-y-auto flex-grow pr-2"></div>
+            <!-- Grouped Content -->
+            <div id="styleCategorizeContent" class="space-y-6 overflow-y-auto p-1 flex-grow"></div>
         </div>
     </div>
 
-    <!-- MODAL 4: OUTFIT PLANNER (MIX & MATCH) -->
+
+    <!-- MODAL 3: OUTFIT PLANNER (5-SLOT INTERACTIVE STYLING TOOL) -->
     <div id="plannerModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl relative border border-pink-100 max-h-[90vh] overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-5xl w-full p-6 sm:p-8 shadow-2xl relative border border-pink-100 max-h-[92vh] overflow-y-auto">
             <button onclick="closePlannerModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
 
             <div class="text-center mb-6">
-                <h3 class="text-2xl font-bold text-gray-900">Mix & Match Outfit Planner</h3>
-                <p class="text-xs text-gray-500 mt-1">Padukan 5 kategori item favorit Anda untuk membuat kombinasi yang sempurna.</p>
+                <div class="w-12 h-12 bg-pink-100 text-pink-600 rounded-full flex items-center justify-center mx-auto mb-2 text-xl">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900">Outfit Planner & Generator</h3>
+                <p class="text-xs text-gray-500">Padu padankan atasan kepala, aksesoris, atasan, bawahan & sepatu dalam satu tampilan!</p>
             </div>
 
-            <div class="flex items-center justify-center gap-3 mb-6">
-                <label class="text-xs font-bold text-gray-700 uppercase">Filter Style:</label>
-                <select id="plannerStyleFilter" onchange="renderPlannerSlots()" class="px-3 py-1.5 rounded-xl border border-gray-200 text-xs focus:outline-none focus:ring-2 focus:ring-pink-400">
-                    <option value="all">Semua Style</option>
-                </select>
-                <button onclick="randomizePlanner()" class="px-4 py-1.5 bg-pink-500 hover:bg-pink-600 text-white rounded-xl text-xs font-bold shadow transition flex items-center gap-1">
-                    <i class="fa-solid fa-shuffle"></i> Acak Kombinasi
+            <!-- Filter Style -->
+            <div class="grid grid-cols-1 gap-3 mb-5">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Pilih Style</label>
+                    <select id="plannerStyle" onchange="onPlannerFilterChange()" class="w-full px-4 py-2.5 rounded-xl border border-pink-200 text-sm"></select>
+                </div>
+            </div>
+
+            <!-- Canvas Display Area (5 Slots Grid Layout) -->
+            <div class="bg-brandPinkLight rounded-2xl p-4 sm:p-6 border border-pink-200 mb-6">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 items-center justify-center">
+                    
+                    <!-- Slot 1: Headwear -->
+                    <div class="text-center flex flex-col items-center">
+                        <span class="text-[10px] font-bold text-pink-600 tracking-wider uppercase mb-1 block">Atasan Kepala</span>
+                        <div class="w-32 h-32 sm:w-36 sm:h-36 bg-white rounded-xl shadow-md border border-pink-100 flex items-center justify-center p-2 relative overflow-hidden group">
+                            <img id="plannedHeadwearImg" src="" class="max-h-full object-contain">
+                            <button onclick="nextSlotItem('headwear')" class="absolute right-1 bg-white/90 p-1.5 rounded-full text-xs shadow hover:bg-pink-100 text-gray-700" title="Next Item"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button onclick="clearSlotItem('headwear')" class="absolute top-1 left-1 bg-red-500/80 hover:bg-red-600 text-white p-1 rounded-full text-[10px] shadow opacity-0 group-hover:opacity-100 transition" title="Clear Slot"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <p id="plannedHeadwearName" class="text-xs font-semibold text-gray-700 mt-2 truncate w-32">Empty</p>
+                    </div>
+
+                    <!-- Slot 2: Accessories -->
+                    <div class="text-center flex flex-col items-center">
+                        <span class="text-[10px] font-bold text-pink-600 tracking-wider uppercase mb-1 block">Aksesoris</span>
+                        <div class="w-32 h-32 sm:w-36 sm:h-36 bg-white rounded-xl shadow-md border border-pink-100 flex items-center justify-center p-2 relative overflow-hidden group">
+                            <img id="plannedAccessoriesImg" src="" class="max-h-full object-contain">
+                            <button onclick="nextSlotItem('accessories')" class="absolute right-1 bg-white/90 p-1.5 rounded-full text-xs shadow hover:bg-pink-100 text-gray-700" title="Next Item"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button onclick="clearSlotItem('accessories')" class="absolute top-1 left-1 bg-red-500/80 hover:bg-red-600 text-white p-1 rounded-full text-[10px] shadow opacity-0 group-hover:opacity-100 transition" title="Clear Slot"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <p id="plannedAccessoriesName" class="text-xs font-semibold text-gray-700 mt-2 truncate w-32">Empty</p>
+                    </div>
+
+                    <!-- Slot 3: Tops -->
+                    <div class="text-center flex flex-col items-center">
+                        <span class="text-[10px] font-bold text-pink-600 tracking-wider uppercase mb-1 block">Atasan</span>
+                        <div class="w-32 h-32 sm:w-36 sm:h-36 bg-white rounded-xl shadow-md border border-pink-100 flex items-center justify-center p-2 relative overflow-hidden group">
+                            <img id="plannedTopsImg" src="" class="max-h-full object-contain">
+                            <button onclick="nextSlotItem('tops')" class="absolute right-1 bg-white/90 p-1.5 rounded-full text-xs shadow hover:bg-pink-100 text-gray-700" title="Next Item"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button onclick="clearSlotItem('tops')" class="absolute top-1 left-1 bg-red-500/80 hover:bg-red-600 text-white p-1 rounded-full text-[10px] shadow opacity-0 group-hover:opacity-100 transition" title="Clear Slot"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <p id="plannedTopsName" class="text-xs font-semibold text-gray-700 mt-2 truncate w-32">Empty</p>
+                    </div>
+
+                    <!-- Slot 4: Bottoms -->
+                    <div class="text-center flex flex-col items-center">
+                        <span class="text-[10px] font-bold text-pink-600 tracking-wider uppercase mb-1 block">Bawahan</span>
+                        <div class="w-32 h-32 sm:w-36 sm:h-36 bg-white rounded-xl shadow-md border border-pink-100 flex items-center justify-center p-2 relative overflow-hidden group">
+                            <img id="plannedBottomsImg" src="" class="max-h-full object-contain">
+                            <button onclick="nextSlotItem('bottoms')" class="absolute right-1 bg-white/90 p-1.5 rounded-full text-xs shadow hover:bg-pink-100 text-gray-700" title="Next Item"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button onclick="clearSlotItem('bottoms')" class="absolute top-1 left-1 bg-red-500/80 hover:bg-red-600 text-white p-1 rounded-full text-[10px] shadow opacity-0 group-hover:opacity-100 transition" title="Clear Slot"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <p id="plannedBottomsName" class="text-xs font-semibold text-gray-700 mt-2 truncate w-32">Empty</p>
+                    </div>
+
+                    <!-- Slot 5: Shoes -->
+                    <div class="text-center flex flex-col items-center col-span-2 sm:col-span-1">
+                        <span class="text-[10px] font-bold text-pink-600 tracking-wider uppercase mb-1 block">Alas Kaki</span>
+                        <div class="w-32 h-32 sm:w-36 sm:h-36 bg-white rounded-xl shadow-md border border-pink-100 flex items-center justify-center p-2 relative overflow-hidden group">
+                            <img id="plannedShoesImg" src="" class="max-h-full object-contain">
+                            <button onclick="nextSlotItem('shoes')" class="absolute right-1 bg-white/90 p-1.5 rounded-full text-xs shadow hover:bg-pink-100 text-gray-700" title="Next Item"><i class="fa-solid fa-chevron-right"></i></button>
+                            <button onclick="clearSlotItem('shoes')" class="absolute top-1 left-1 bg-red-500/80 hover:bg-red-600 text-white p-1 rounded-full text-[10px] shadow opacity-0 group-hover:opacity-100 transition" title="Clear Slot"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <p id="plannedShoesName" class="text-xs font-semibold text-gray-700 mt-2 truncate w-32">Empty</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button onclick="randomizeOutfit()" class="py-3.5 px-4 bg-pink-500 hover:bg-pink-600 text-white font-bold rounded-xl transition flex items-center justify-center space-x-2 shadow-md">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <span>Acak Kombinasi (Randomize)</span>
+                </button>
+                <button id="saveFavoriteBtn" onclick="saveFavoriteOutfit()" class="py-3.5 px-4 bg-pink-100 hover:bg-pink-200 text-pink-700 font-bold rounded-xl transition flex items-center justify-center space-x-2 border border-pink-200">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>Save to Favorites</span>
                 </button>
             </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 mb-6 text-center">
-                <div class="border border-pink-200 rounded-2xl p-3 bg-pink-50/50 flex flex-col items-center justify-between min-h-[160px]">
-                    <span class="text-[11px] font-bold text-pink-600 uppercase">Headwear</span>
-                    <div id="slot-headwear" class="w-full flex-grow flex items-center justify-center my-2"></div>
-                    <button onclick="nextSlotItem('headwear')" class="text-xs text-gray-600 hover:text-pink-600 font-bold">Ganti <i class="fa-solid fa-arrows-rotate"></i></button>
-                </div>
-                <div class="border border-pink-200 rounded-2xl p-3 bg-pink-50/50 flex flex-col items-center justify-between min-h-[160px]">
-                    <span class="text-[11px] font-bold text-pink-600 uppercase">Accessories</span>
-                    <div id="slot-accessories" class="w-full flex-grow flex items-center justify-center my-2"></div>
-                    <button onclick="nextSlotItem('accessories')" class="text-xs text-gray-600 hover:text-pink-600 font-bold">Ganti <i class="fa-solid fa-arrows-rotate"></i></button>
-                </div>
-                <div class="border border-pink-200 rounded-2xl p-3 bg-pink-50/50 flex flex-col items-center justify-between min-h-[160px]">
-                    <span class="text-[11px] font-bold text-pink-600 uppercase">Tops</span>
-                    <div id="slot-tops" class="w-full flex-grow flex items-center justify-center my-2"></div>
-                    <button onclick="nextSlotItem('tops')" class="text-xs text-gray-600 hover:text-pink-600 font-bold">Ganti <i class="fa-solid fa-arrows-rotate"></i></button>
-                </div>
-                <div class="border border-pink-200 rounded-2xl p-3 bg-pink-50/50 flex flex-col items-center justify-between min-h-[160px]">
-                    <span class="text-[11px] font-bold text-pink-600 uppercase">Bottoms</span>
-                    <div id="slot-bottoms" class="w-full flex-grow flex items-center justify-center my-2"></div>
-                    <button onclick="nextSlotItem('bottoms')" class="text-xs text-gray-600 hover:text-pink-600 font-bold">Ganti <i class="fa-solid fa-arrows-rotate"></i></button>
-                </div>
-                <div class="border border-pink-200 rounded-2xl p-3 bg-pink-50/50 flex flex-col items-center justify-between min-h-[160px]">
-                    <span class="text-[11px] font-bold text-pink-600 uppercase">Shoes</span>
-                    <div id="slot-shoes" class="w-full flex-grow flex items-center justify-center my-2"></div>
-                    <button onclick="nextSlotItem('shoes')" class="text-xs text-gray-600 hover:text-pink-600 font-bold">Ganti <i class="fa-solid fa-arrows-rotate"></i></button>
-                </div>
-            </div>
-
-            <button onclick="saveFavoriteOutfit()" class="w-full py-3.5 bg-black hover:bg-gray-800 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center gap-2">
-                <i class="fa-solid fa-heart text-pink-400"></i> SIMPAN KE FAVORIT
-            </button>
         </div>
     </div>
 
-    <!-- MODAL 5: MY FAVORITE OUTFITS -->
+    <!-- MODAL FAVORITE OUTFITS -->
     <div id="favoriteModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl relative border border-pink-100 max-h-[90vh] flex flex-col">
+        <div class="bg-white rounded-3xl max-w-5xl w-full p-6 sm:p-8 shadow-2xl relative border border-pink-100 max-h-[90vh] overflow-y-auto">
             <button onclick="closeFavoriteModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
-
-            <div class="text-center mb-6">
-                <h3 class="text-2xl font-bold text-gray-900">Kombinasi Outfit Favorit</h3>
-                <p class="text-xs text-gray-500 mt-1">Koleksi padu padan gaya pilihan Anda.</p>
+            <div class="text-left mb-6 pr-10">
+                <h3 class="text-2xl font-bold text-gray-900"><i class="fa-solid fa-heart text-pink-500 mr-2"></i>My Favorite Outfits</h3>
+                <p class="text-xs text-gray-500 mt-1">Kombinasi outfit yang kamu simpan dari Outfit Planner.</p>
             </div>
-
-            <div id="favoritesContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-y-auto flex-grow p-2"></div>
+            <div id="favoriteGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+            </div>
         </div>
     </div>
 
-    <!-- MODAL 6: AUTHENTICATION (SIGN IN / SIGN UP) -->
+    <!-- CONFIRMATION MODAL FOR DELETE -->
+    <div id="deleteModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl border border-pink-100">
+            <div class="w-12 h-12 bg-red-100 text-red-500 rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+                <i class="fa-solid fa-trash-can"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-1">Hapus Pakaian Ini?</h4>
+            <p id="deleteModalText" class="text-xs text-gray-500 mb-6">Item ini akan dihapus permanen dari koleksi lemari Anda.</p>
+            <div class="flex space-x-3">
+                <button onclick="closeDeleteModal()" class="w-1/2 py-2.5 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold rounded-xl text-xs transition">
+                    Batal
+                </button>
+                <button id="confirmDeleteBtn" class="w-1/2 py-2.5 bg-red-500 hover:bg-red-600 text-white font-bold rounded-xl text-xs transition">
+                    Hapus
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL AUTHENTICATION (SIGN IN & SIGN UP) -->
     <div id="authModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-pink-100">
             <button onclick="closeAuthModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
 
+            <!-- Header Title -->
             <div class="text-center mb-6">
-                <h3 id="authModalTitle" class="text-2xl font-bold text-gray-900">Sign In</h3>
-                <p id="authModalSubtitle" class="text-xs text-gray-500 mt-1">Masuk untuk mengakses lemari digital Anda.</p>
+                <h3 id="authModalTitle" class="text-2xl font-bold text-gray-900">Sign In ke ReWear</h3>
+                <p id="authModalDesc" class="text-xs text-gray-500 mt-1">Masukkan akun Anda untuk melanjutkan.</p>
             </div>
 
-            <form onsubmit="handleAuthSubmit(event)" class="space-y-4">
-                <div id="nameInputGroup" class="hidden">
+            <!-- Form Input -->
+            <form id="authForm" onsubmit="handleAuthSubmit(event)" class="space-y-4 text-left">
+                <!-- Input Nama (Hanya muncul saat Sign Up) -->
+                <div id="nameFieldGroup" class="hidden">
                     <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Lengkap</label>
-                    <input type="text" id="authName" placeholder="Nama Anda" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400">
+                    <input type="text" id="authName" placeholder="Nama Anda" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-pink-400 text-sm">
                 </div>
 
+                <!-- Input Email -->
                 <div>
                     <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Email</label>
-                    <input type="email" id="authEmail" required placeholder="email@contoh.com" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400">
+                    <input type="text" id="authIdentifier" placeholder="email@domain.com" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-pink-400 text-sm">
                 </div>
 
+                <!-- Input Password -->
                 <div>
                     <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Password</label>
-                    <input type="password" id="authPassword" required placeholder="••••••••" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-pink-400">
+                    <input type="password" id="authPassword" placeholder="••••••••" required class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-pink-400 text-sm">
                 </div>
 
+                <!-- Tombol Aksi Utama -->
                 <button type="submit" id="authSubmitBtn" class="w-full py-3.5 bg-black hover:bg-gray-800 text-white font-bold rounded-xl shadow-lg transition mt-2">
-                    MASUK
+                    SIGN IN
                 </button>
             </form>
 
-            <div class="mt-6 text-center text-xs text-gray-600">
-                <span id="authToggleText">Belum punya akun?</span>
-                <button onclick="toggleAuthMode()" id="authToggleBtn" class="font-bold text-pink-600 hover:underline ml-1">Daftar sekarang</button>
+            <!-- Toggle Switch antara Sign In & Sign Up -->
+            <div class="text-center mt-4">
+                <p id="authSwitchText" class="text-xs text-gray-600">
+                    Belum punya akun? <button type="button" onclick="openAuthModal('signup')" class="text-pink-600 font-bold hover:underline">Sign Up</button>
+                </p>
             </div>
         </div>
     </div>
 
+
     <!-- JAVASCRIPT LOGIC -->
     <script>
-        let currentUser = JSON.parse(localStorage.getItem('rewear_current_user')) || null;
-        let users = JSON.parse(localStorage.getItem('rewear_users')) || [];
-        let styleCategories = JSON.parse(localStorage.getItem('rewear_styles')) || ['Casual', 'Formal', 'Streetwear', 'Vintage'];
-        let wardrobe = [];
-        let favorites = [];
-        let currentUploadedImageBase64 = '';
-        let authMode = 'signin';
-        let plannerIndices = { headwear: 0, accessories: 0, tops: 0, bottoms: 0, shoes: 0 };
+        // Default Mock Wardrobe Items (Hanya tampil saat belum login / mode demo)
+        const initialWardrobeData = [
+            // Headwear
+            { id: 101, name: 'Distressed Star Baseball Cap', category: 'headwear', color: 'Grey', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/hqnk6vhexm6mi3y5qxdo.jpg' },
+            { id: 102, name: 'Fur Head', category: 'headwear', color: 'Brown', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_21.51.07.jpg' },
+            { id: 103, name: 'Beret Hat', category: 'headwear', color: 'White', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_21.52.36.jpg' },
+            
+            // Accessories
+            { id: 201, name: 'Punk Star Leather Bracelet', category: 'accessories', color: 'Black', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/Gelang_Pria_Wanita_Hip_Hop_Retro_Star_Leather_Bracelet.jpg' },
+            { id: 202, name: 'Gold Star Pendant Necklace', category: 'accessories', color: 'Gold', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/Guido_Maria_Kretschmer_Kette.jpg' },
+            { id: 203, name: 'Brown Ties', category: 'accessories', color: 'Brown', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_21.51.39.jpg' },
+            { id: 204, name: 'Patterned Scarf', category: 'accessories', color: 'Mix', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_21.51.53.jpg' },
 
-        const defaultSampleWardrobe = [
-            { id: 1, name: 'Beanie Pink Retro', category: 'headwear', color: 'Pink', style: 'Casual', image: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/1000304688.jpg' },
-            { id: 2, name: 'T-Shirt White Minimalist', category: 'tops', color: 'Putih', style: 'Casual', image: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/hqnk6vhexm6mi3y5qxdo.jpg' },
-            { id: 3, name: 'Gelang Leather Star', category: 'accessories', color: 'Cokelat', style: 'Streetwear', image: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/Gelang_Pria_Wanita_Hip_Hop_Retro_Star_Leather_Bracelet.jpg' },
-            { id: 4, name: 'Jeans Blue Denim', category: 'bottoms', color: 'Biru', style: 'Casual', image: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/download_2.jpg' },
-            { id: 5, name: 'Sepatu Boots Hitam', category: 'shoes', color: 'Hitam', style: 'Formal', image: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/__%EF%BE%9F___%EF%BE%9F.jpg' }
+            // Tops
+            { id: 1, name: 'Brown Babydoll Blouse', category: 'tops', color: 'Brown', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/1000304688.jpg' },
+            { id: 2, name: 'Polo Shirt', category: 'tops', color: 'White', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_21.51.28.jpg' },
+            { id: 3, name: 'Denim Top', category: 'tops', color: 'Navy', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_21.53.01.jpg' },
+            
+            // Bottoms
+            { id: 4, name: 'Wide Leg Jeans', category: 'bottoms', color: 'Grey', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/download_2.jpg' },
+            { id: 5, name: 'Flared Jeans', category: 'bottoms', color: 'Black', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_21.51.28_1.jpg' },
+            { id: 6, name: 'USA Jeans', category: 'bottoms', color: 'Mix', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_21.53.38.jpg' },
+            
+            // Dresses
+            { id: 7, name: 'Polkadot Dress', category: 'dresses', color: 'Blue', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_22.31.46.jpg' },
+            
+            // Shoes
+            { id: 8, name: 'Chunky Loafers', category: 'shoes', color: 'Black', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/__%EF%BE%9F___%EF%BE%9F.jpg' }
         ];
 
-        document.addEventListener('DOMContentLoaded', () => {
-            initApp();
-        });
-
-        function initApp() {
-            loadUserData();
-            renderAuthUI();
-            renderStyleCategories();
+        // Ambil kunci unik berdasarkan akun user yang sedang login
+        function getCurrentUserWardrobeKey() {
+            const currentUser = JSON.parse(localStorage.getItem('rewear_current_user'));
+            if (!currentUser) return null;
+            return 'rewear_wardrobe_' + (currentUser.email || currentUser.identifier);
         }
 
-        function loadUserData() {
-            if (currentUser) {
-                const storageKey = `rewear_wardrobe_${currentUser.email}`;
-                const favKey = `rewear_fav_${currentUser.email}`;
-                wardrobe = JSON.parse(localStorage.getItem(storageKey)) || [];
-                favorites = JSON.parse(localStorage.getItem(favKey)) || [];
+        // Load data lemari dengan aturan:
+        // - Belum Login: Tampilkan foto contoh demo (initialWardrobeData)
+        // - Sudah Login & Ada Data Tersimpan: Tampilkan data koleksi user tersebut
+        // - Sudah Login tapi Akun Baru: Lemari murni kosong ([]) agar user input sendiri
+        function loadUserWardrobe() {
+            const key = getCurrentUserWardrobeKey();
+            if (!key) {
+                return [...initialWardrobeData]; 
+            }
+            const savedData = localStorage.getItem(key);
+            if (savedData) {
+                return JSON.parse(savedData);
             } else {
-                wardrobe = JSON.parse(localStorage.getItem('rewear_wardrobe_guest')) || defaultSampleWardrobe;
-                favorites = JSON.parse(localStorage.getItem('rewear_fav_guest')) || [];
+                return []; 
             }
         }
 
-        function saveUserData() {
-            if (currentUser) {
-                const storageKey = `rewear_wardrobe_${currentUser.email}`;
-                const favKey = `rewear_fav_${currentUser.email}`;
-                localStorage.setItem(storageKey, JSON.stringify(wardrobe));
-                localStorage.setItem(favKey, JSON.stringify(favorites));
-            } else {
-                localStorage.setItem('rewear_wardrobe_guest', JSON.stringify(wardrobe));
-                localStorage.setItem('rewear_fav_guest', JSON.stringify(favorites));
+        let wardrobeData = loadUserWardrobe();
+
+        // FAVORITE OUTFITS: penyimpanan terpisah untuk setiap akun
+        function getFavoriteKey() {
+            const currentUser = JSON.parse(localStorage.getItem('rewear_current_user') || 'null');
+            if (!currentUser) return null;
+            return 'rewear_favorites_' + (currentUser.identifier || currentUser.email);
+        }
+
+        function loadFavoriteOutfits() {
+            const key = getFavoriteKey();
+            if (!key) return [];
+            try {
+                return JSON.parse(localStorage.getItem(key) || '[]');
+            } catch (error) {
+                console.error('Data favorite tidak dapat dibaca:', error);
+                return [];
             }
-            localStorage.setItem('rewear_styles', JSON.stringify(styleCategories));
         }
 
-        function showToast(message, type = 'success') {
-            const container = document.getElementById('toastContainer');
-            const toast = document.createElement('div');
-            const bgColor = type === 'success' ? 'bg-gray-950 text-white' : 'bg-red-500 text-white';
-            
-            toast.className = `${bgColor} px-4 py-3 rounded-2xl shadow-xl text-xs font-bold flex items-center space-x-2 animate-toast pointer-events-auto border border-white/20`;
-            toast.innerHTML = `<i class="fa-solid type==='success'?'fa-circle-checktext-pink-400':'fa-circle-exclamation'"></i><span>{message}</span>`;
-            
-            container.appendChild(toast);
-            setTimeout(() => { toast.remove(); }, 3000);
-        }
-
-        function previewUploadedImage(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            if (file.size > 5 * 1024 * 1024) {
-                showToast('Ukuran file maksimal 5MB!', 'error');
+        function saveFavoriteOutfit() {
+            const key = getFavoriteKey();
+            if (!key) {
+                showToast('Silakan login terlebih dahulu untuk menyimpan favorite!', 'danger');
                 return;
             }
 
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                currentUploadedImageBase64 = e.target.result;
-                document.getElementById('imagePreview').src = currentUploadedImageBase64;
-                document.getElementById('imagePreviewContainer').classList.remove('hidden');
-                document.getElementById('dropArea').classList.add('hidden');
-            };
-            reader.readAsDataURL(file);
-        }
+            const categories = ['headwear', 'accessories', 'tops', 'bottoms', 'shoes'];
+            const outfit = {};
 
-        function resetUploadedImage() {
-            currentUploadedImageBase64 = '';
-            document.getElementById('itemImageInput').value = '';
-            document.getElementById('imagePreviewContainer').classList.add('hidden');
-            document.getElementById('dropArea').classList.remove('hidden');
-        }
+            categories.forEach(cat => {
+                if (slotCleared[cat]) return;
+                const items = getPlannerItems(cat);
+                if (items.length > 0) {
+                    outfit[cat] = items[slotIndices[cat] % items.length];
+                }
+            });
 
-        function renderStyleCategories() {
-            const selectEl = document.getElementById('itemStyle');
-            const listContainer = document.getElementById('styleCategoryList');
-            const plannerFilter = document.getElementById('plannerStyleFilter');
-
-            if (!selectEl) return;
-
-            selectEl.innerHTML = '';
-            listContainer.innerHTML = '';
-            
-            if (plannerFilter) {
-                plannerFilter.innerHTML = '<option value="all">Semua Style</option>';
+            if (Object.keys(outfit).length === 0) {
+                showToast('Belum ada item outfit yang dapat disimpan!', 'danger');
+                return;
             }
 
-            styleCategories.forEach(style => {
-                const opt = document.createElement('option');
-                opt.value = style;
-                opt.textContent = style;
-                selectEl.appendChild(opt);
+            const signature = categories.map(cat => outfit[cat] ? outfit[cat].id : null).join('|');
+            const favorites = loadFavoriteOutfits();
+            const alreadySaved = favorites.some(saved => {
+                const savedSignature = categories.map(cat =>
+                    saved.outfit && saved.outfit[cat] ? saved.outfit[cat].id : null
+                ).join('|');
+                return savedSignature === signature;
+            });
 
-                if (plannerFilter) {
-                    const optP = document.createElement('option');
-                    optP.value = style;
-                    optP.textContent = style;
-                    plannerFilter.appendChild(optP);
-                }
+            if (alreadySaved) {
+                showToast('Kombinasi outfit ini sudah ada di Favorite!', 'info');
+                return;
+            }
 
-                const badge = document.createElement('span');
-                badge.className = 'inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-pink-100 text-pink-700 text-[11px] font-semibold';
-                badge.innerHTML = `style<buttontype="button"onclick="removeStyleCategory('{style}')" class="hover:text-red-500 ml-0.5"><i class="fa-solid fa-xmark"></i></button>`;
-                listContainer.appendChild(badge);
+            favorites.unshift({
+                id: Date.now(),
+                outfit: outfit,
+                date: new Date().toLocaleDateString('id-ID')
+            });
+
+            localStorage.setItem(key, JSON.stringify(favorites));
+            showToast('Outfit berhasil disimpan ke Favorite!');
+        }
+
+        function openFavoriteModal() {
+            if (!getFavoriteKey()) {
+                showToast('Silakan login terlebih dahulu!', 'danger');
+                return;
+            }
+            renderFavoriteOutfits();
+            document.getElementById('favoriteModal').classList.remove('hidden');
+        }
+
+        function closeFavoriteModal() {
+            document.getElementById('favoriteModal').classList.add('hidden');
+        }
+
+        function renderFavoriteOutfits() {
+            const grid = document.getElementById('favoriteGrid');
+            const favorites = loadFavoriteOutfits();
+            grid.innerHTML = '';
+
+            if (favorites.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12">
+                        <i class="fa-regular fa-heart text-5xl text-pink-300 mb-3"></i>
+                        <p class="font-bold text-gray-700">Belum Ada Favorite Outfit</p>
+                        <p class="text-sm text-gray-400 mt-1">Acak kombinasi outfit, lalu simpan outfit yang kamu suka.</p>
+                    </div>`;
+                return;
+            }
+
+            favorites.forEach(saved => {
+                const card = document.createElement('div');
+                card.className = 'bg-pink-50 rounded-2xl p-4 border border-pink-100';
+                const categoryLabels = {
+                    headwear: 'Atasan Kepala',
+                    accessories: 'Aksesoris',
+                    tops: 'Atasan',
+                    bottoms: 'Bawahan',
+                    shoes: 'Alas Kaki'
+                };
+
+                const itemMarkup = Object.entries(saved.outfit || {}).map(([category, item]) => `
+                    <div class="bg-white rounded-xl p-2 min-w-0">
+                        <div class="h-28 flex items-center justify-center">
+                            <img src="${item.img}" alt="${item.name}" class="max-h-full max-w-full object-contain">
+                        </div>
+                        <p class="text-[10px] text-pink-600 font-bold uppercase mt-1">${categoryLabels[category] || category}</p>
+                        <p class="text-xs text-gray-700 font-semibold break-words">${item.name}</p>
+                    </div>
+                `).join('');
+
+                card.innerHTML = `
+                    <div class="grid grid-cols-2 gap-2 mb-3">${itemMarkup}</div>
+                    <p class="text-xs text-gray-400 mb-3">Disimpan: ${saved.date || '-'}</p>
+                    <button onclick="removeFavoriteOutfit(${Number(saved.id)})"
+                        class="w-full py-2 bg-white border border-pink-200 text-pink-600 rounded-xl text-xs font-bold hover:bg-pink-100 transition">
+                        <i class="fa-solid fa-heart-crack mr-1"></i> Hapus dari Favorite
+                    </button>`;
+                grid.appendChild(card);
             });
         }
 
-        function addStyleCategory() {
-            const input = document.getElementById('newStyleName');
-            const val = input.value.trim();
-            if (!val) {
-                showToast('Masukkan nama style baru!', 'error');
-                return;
-            }
-            if (styleCategories.includes(val)) {
-                showToast('Style tersebut sudah ada!', 'error');
-                return;
-            }
-
-            styleCategories.push(val);
-            input.value = '';
-            saveUserData();
-            renderStyleCategories();
-            showToast(`Style "${val}" berhasil ditambahkan!`);
+        function removeFavoriteOutfit(id) {
+            const key = getFavoriteKey();
+            if (!key) return;
+            const favorites = loadFavoriteOutfits().filter(item => item.id !== id);
+            localStorage.setItem(key, JSON.stringify(favorites));
+            renderFavoriteOutfits();
+            showToast('Outfit berhasil dihapus dari Favorite!', 'info');
         }
 
-        function removeStyleCategory(styleName) {
-            styleCategories = styleCategories.filter(s => s !== styleName);
-            saveUserData();
-            renderStyleCategories();
-            showToast(`Style "${styleName}" dihapus.`);
+        // Simpan data khusus ke penyimpanan akun user tersebut
+        function saveState() {
+            const key = getCurrentUserWardrobeKey();
+            if (key) {
+                localStorage.setItem(key, JSON.stringify(wardrobeData));
+            }
+        }
+        
+        // Current Slot Indices for Planner
+        let slotIndices = {
+            headwear: 0,
+            accessories: 0,
+            tops: 0,
+            bottoms: 0,
+            shoes: 0
+        };
+
+        // Active State Cleared Flags
+        let slotCleared = {
+            headwear: false,
+            accessories: false,
+            tops: false,
+            bottoms: false,
+            shoes: false
+        };
+
+        let currentFilterCategory = 'all';
+        let pendingDeleteId = null;
+
+        // Toast Notification System
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            if (!container) return;
+            const toast = document.createElement('div');
+            
+            const bgColor = type === 'success' ? 'bg-gray-900 text-white' : (type === 'danger' ? 'bg-red-600 text-white' : 'bg-pink-600 text-white');
+            const icon = type === 'success' ? 'fa-circle-check' : (type === 'danger' ? 'fa-trash' : 'fa-circle-info');
+
+            toast.className = `pointer-events-auto flex items-center space-x-3 ${bgColor} px-4 py-3 rounded-2xl shadow-xl text-xs font-semibold animate-toast`;
+            toast.innerHTML = `
+                <i class="fa-solid ${icon} text-sm"></i>
+                <span>${message}</span>
+            `;
+
+            container.appendChild(toast);
+            setTimeout(() => {
+                toast.remove();
+            }, 3000);
         }
 
-        function saveWardrobeItem() {
-            const name = document.getElementById('itemName').value.trim();
-            const category = document.getElementById('itemCategory').value;
-            const color = document.getElementById('itemColor').value.trim();
-            const style = document.getElementById('itemStyle').value || 'Casual';
+        // Helper: escape teks agar aman ditampilkan di HTML
+        function escapeHtml(str) {
+            return String(str).replace(/[&<>"']/g, ch => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[ch]));
+        }
 
-            if (!name) {
-                showToast('Mohon isi nama item!', 'error');
-                return;
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Toggle Accessory Hint Helper
+        function toggleAccessoryTypeHint(val) {
+            const hint = document.getElementById('accessoryHint');
+            if (!hint) return;
+            if (val === 'accessories') {
+                hint.classList.remove('hidden');
+            } else {
+                hint.classList.add('hidden');
             }
-            if (!currentUploadedImageBase64) {
-                showToast('Mohon upload foto item terlebih dahulu!', 'error');
-                return;
-            }
+        }
 
-            const newItem = {
-                id: Date.now(),
-                name: name,
-                category: category,
-                color: color || 'Netral',
-                style: style,
-                image: currentUploadedImageBase64
-            };
-
-            wardrobe.unshift(newItem);
-            saveUserData();
-
-            document.getElementById('itemName').value = '';
-            document.getElementById('itemColor').value = '';
-            resetUploadedImage();
-            closeWardrobeModal();
-
-            showToast('Item berhasil disimpan ke lemari!');
+        // Modal Controls
+        function openWardrobeModal() {
+            document.getElementById('wardrobeModal').classList.remove('hidden');
+        }
+        function closeWardrobeModal() {
+            document.getElementById('wardrobeModal').classList.add('hidden');
         }
 
         function openWardrobeViewModal() {
+            renderWardrobeGrid(currentFilterCategory);
             document.getElementById('wardrobeViewModal').classList.remove('hidden');
-            filterWardrobeView('all');
         }
         function closeWardrobeViewModal() {
             document.getElementById('wardrobeViewModal').classList.add('hidden');
         }
 
-        function filterWardrobeView(category) {
-            const grid = document.getElementById('wardrobeGrid');
-            grid.innerHTML = '';
-
-            const filtered = category === 'all' ? wardrobe : wardrobe.filter(i => i.category === category);
-
-            if (filtered.length === 0) {
-                grid.innerHTML = `<div class="col-span-full py-12 text-center text-gray-400 text-sm">Belum ada item di kategori ini.</div>`;
-                return;
-            }
-
-            filtered.forEach(item => {
-                const card = document.createElement('div');
-                card.className = 'bg-pink-50/60 rounded-2xl p-3 border border-pink-100 flex flex-col justify-between relative group hover:shadow-md transition';
-                card.innerHTML = `
-                    <button onclick="deleteWardrobeItem(${item.id})" class="absolute top-2 right-2 w-6 h-6 bg-white/80 hover:bg-red-500 hover:text-white rounded-full text-xs text-gray-500 flex items-center justify-center transition z-10">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                    <img src="item.image"alt="{item.name}" class="h-28 w-full object-contain rounded-xl mb-2 bg-white p-1">
-                    <div>
-                        <h4 class="font-bold text-xs text-gray-800 truncate">${item.name}</h4>
-                        <div class="flex justify-between items-center mt-1">
-                            <span class="text-[10px] bg-pink-200 text-pink-800 px-2 py-0.5 rounded-md font-semibold">${item.style}</span>
-                            <span class="text-[10px] text-gray-500">${item.color}</span>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function deleteWardrobeItem(id) {
-            wardrobe = wardrobe.filter(i => i.id !== id);
-            saveUserData();
-            filterWardrobeView('all');
-            showToast('Item telah dihapus.');
-        }
-
-        function openStyleCategorizeModal() {
-            document.getElementById('styleCategorizeModal').classList.remove('hidden');
-            renderStyleCategorizeContent();
-        }
-        function closeStyleCategorizeModal() {
-            document.getElementById('styleCategorizeModal').classList.add('hidden');
-        }
-
-        function addStyleCategoryFromCategorize() {
-            const input = document.getElementById('newStyleInputCategorize');
-            const val = input.value.trim();
-            if (!val) return;
-            if (!styleCategories.includes(val)) {
-                styleCategories.push(val);
-                saveUserData();
-                renderStyleCategories();
-                renderStyleCategorizeContent();
-                input.value = '';
-                showToast(`Style "${val}" ditambahkan!`);
-            }
-        }
-
-        // --- FUNGSI YANG SUDAH DIPERBAIKI (TIDAK ADA ERROR LAGI) ---
-        function renderStyleCategorizeContent() {
-            const container = document.getElementById('styleCategorizeContainer');
-            container.innerHTML = '';
-
-            styleCategories.forEach(style => {
-                const itemsInStyle = wardrobe.filter(i => i.style === style);
-                const section = document.createElement('div');
-                section.className = 'border border-pink-100 rounded-2xl p-4 bg-pink-50/30';
-                
-                let itemsHTML = '';
-                if (itemsInStyle.length === 0) {
-                    itemsHTML = `<p class="text-xs text-gray-400 italic">Belum ada item dengan style ini.</p>`;
-                } else {
-                    itemsHTML = `<div class="grid grid-cols-3 sm:grid-cols-5 gap-3 mt-3">
-                        ${itemsInStyle.map(item => `
-                            <div class="bg-white p-2 rounded-xl border border-pink-100 text-center">
-                                <img src="${item.image}" class="h-16 w-full object-contain mb-1">
-                                <p class="text-[10px] font-bold truncate text-gray-700">${item.name}</p>
-                            </div>
-                        `).join('')}
-                    </div>`;
-                }
-
-                section.innerHTML = `
-                    <div class="flex justify-between items-center">
-                        <h4 class="font-bold text-sm text-pink-700 flex items-center gap-2">
-                            <i class="fa-solid fa-tag"></i> style({itemsInStyle.length} item)
-                        </h4>
-                    </div>
-                    ${itemsHTML}
-                `;
-                container.appendChild(section);
-            });
-        }
-
         function openPlannerModal() {
+            updatePlannerUI();
             document.getElementById('plannerModal').classList.remove('hidden');
-            renderStyleCategories();
-            renderPlannerSlots();
         }
         function closePlannerModal() {
             document.getElementById('plannerModal').classList.add('hidden');
         }
 
-        function renderPlannerSlots() {
-            const selectedStyle = document.getElementById('plannerStyleFilter').value;
+        function closeDeleteModal() {
+            document.getElementById('deleteModal').classList.add('hidden');
+            pendingDeleteId = null;
+        }
+
+        // Image Upload Preview Simulation
+        function previewUploadedImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('imagePreview');
+                    preview.src = e.target.result;
+                    document.getElementById('imagePreviewContainer').classList.remove('hidden');
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // --- STYLE CATEGORIES (tersimpan per akun, default: Casual dan Formal) ---
+        function getStyleStorageKey() {
+            const user = JSON.parse(localStorage.getItem('rewear_current_user') || 'null');
+            return user ? 'rewear_styles_' + (user.identifier || user.email) : 'rewear_styles_guest';
+        }
+        function loadStyleCategories() {
+            try {
+                const saved = localStorage.getItem(getStyleStorageKey());
+                return saved ? JSON.parse(saved) : ['Casual', 'Formal'];
+            } catch (error) {
+                return ['Casual', 'Formal'];
+            }
+        }
+        let styleCategories = loadStyleCategories();
+
+        function saveStyleCategories() {
+            localStorage.setItem(getStyleStorageKey(), JSON.stringify(styleCategories));
+            renderStyleControls();
+            refreshStyleCategorizeIfOpen();
+        }
+        function renderStyleControls() {
+            const itemSelect = document.getElementById('itemStyle');
+            const plannerSelect = document.getElementById('plannerStyle');
+            const list = document.getElementById('styleCategoryList');
+
+            // Pertahankan pilihan planner saat ini jika masih ada
+            const currentPlannerValue = plannerSelect ? plannerSelect.value : 'all';
+
+            if (itemSelect) itemSelect.innerHTML = styleCategories.map(x => `<option value="${x.replace(/"/g, '&quot;')}">${x}</option>`).join('') || '<option value="">Belum ada style</option>';
+            if (plannerSelect) {
+                plannerSelect.innerHTML = '<option value="all">Semua Style</option>' + styleCategories.map(x => `<option value="${x.replace(/"/g, '&quot;')}">${x}</option>`).join('');
+                plannerSelect.value = (currentPlannerValue === 'all' || styleCategories.includes(currentPlannerValue)) ? currentPlannerValue : 'all';
+            }
+            if (list) list.innerHTML = styleCategories.map(x => `<span class="inline-flex items-center gap-1 bg-pink-50 border border-pink-200 text-pink-700 rounded-full px-2 py-1 text-[11px]">${x}<button type="button" onclick="removeStyleCategory(${JSON.stringify(x).replace(/</g, '\\u003c').replace(/"/g, '&quot;')})" aria-label="Hapus ${x}"><i class="fa-solid fa-xmark"></i></button></span>`).join('') || '<span class="text-xs text-gray-400">Belum ada kategori style.</span>';
+        }
+        function addStyleCategory() {
+            const input = document.getElementById('newStyleName');
+            const value = input.value.trim();
+            if (!value) return;
+            if (styleCategories.some(x => x.toLowerCase() === value.toLowerCase())) { showToast('Style sudah tersedia.', 'info'); return; }
+            styleCategories.push(value);
+            input.value = '';
+            saveStyleCategories();
+            showToast('Kategori style ditambahkan!');
+        }
+        function removeStyleCategory(value) {
+            styleCategories = styleCategories.filter(x => x !== value);
+            saveStyleCategories();
+            updatePlannerUI();
+            showToast('Kategori style dihapus.', 'info');
+        }
+
+        // --- STYLE CATEGORIZE (menu di My Wardrobe) ---
+        const NO_STYLE_KEY = '__no_style__';
+        let currentStyleView = 'all';
+
+        function openStyleCategorizeModal() {
+            currentStyleView = 'all';
+            renderStyleCategorize();
+            document.getElementById('styleCategorizeModal').classList.remove('hidden');
+        }
+        function closeStyleCategorizeModal() {
+            document.getElementById('styleCategorizeModal').classList.add('hidden');
+        }
+        function refreshStyleCategorizeIfOpen() {
+            const modal = document.getElementById('styleCategorizeModal');
+            if (modal && !modal.classList.contains('hidden')) {
+                renderStyleCategorize();
+            }
+        }
+        function setStyleView(value) {
+            currentStyleView = value;
+            renderStyleCategorize();
+        }
+
+        function renderStyleCategorize() {
+            const chipsContainer = document.getElementById('styleFilterChips');
+            const content = document.getElementById('styleCategorizeContent');
+            if (!chipsContainer || !content) return;
+
+            const categoryLabels = {
+                headwear: 'Atasan Kepala',
+                accessories: 'Aksesoris',
+                tops: 'Atasan',
+                bottoms: 'Bawahan',
+                dresses: 'Dress',
+                shoes: 'Sepatu'
+            };
+
+            // Susun grup: tiap style + item tanpa style (atau style yang sudah dihapus)
+            const groups = styleCategories.map(name => ({
+                key: name,
+                label: name,
+                items: wardrobeData.filter(item => item.style === name)
+            }));
+            const noStyleItems = wardrobeData.filter(item => !item.style || !styleCategories.includes(item.style));
+            if (noStyleItems.length > 0) {
+                groups.push({ key: NO_STYLE_KEY, label: 'Tanpa Style', items: noStyleItems });
+            }
+
+            // Jika filter aktif sudah tidak ada, kembali ke "Semua"
+            if (currentStyleView !== 'all' && !groups.some(g => g.key === currentStyleView)) {
+                currentStyleView = 'all';
+            }
+
+            // Chips filter
+            chipsContainer.innerHTML = '';
+            const makeChip = (value, label, count) => {
+                const btn = document.createElement('button');
+                const active = currentStyleView === value;
+                btn.type = 'button';
+                btn.className = 'px-4 py-1.5 rounded-full text-xs font-bold transition ' +
+                    (active ? 'bg-pink-500 text-white' : 'bg-gray-100 text-gray-600 hover:bg-pink-100');
+                btn.textContent = `${label} (${count})`;
+                btn.addEventListener('click', () => setStyleView(value));
+                chipsContainer.appendChild(btn);
+            };
+            makeChip('all', 'Semua', wardrobeData.length);
+            groups.forEach(g => makeChip(g.key, g.label, g.items.length));
+
+            // Konten per grup
+            content.innerHTML = '';
+            if (groups.length === 0) {
+                content.innerHTML = `<div class="text-center text-gray-400 py-12 text-sm">
+                    <i class="fa-solid fa-tags text-3xl mb-2 text-pink-300 block"></i>
+                    Belum ada kategori style. Tambahkan lewat Scan New Clothes.
+                </div>`;
+                return;
+            }
+
+            const visibleGroups = currentStyleView === 'all' ? groups : groups.filter(g => g.key === currentStyleView);
+
+            visibleGroups.forEach(group => {
+                const section = document.createElement('div');
+                const itemsMarkup = group.items.length === 0
+                    ? `<p class="text-xs text-gray-400 italic">Belum ada item dengan style ini.</p>`
+                    : `<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                        ${group.items.map(item => `
+                            <div class="bg-pink-50/60 rounded-2xl p-3 border border-pink-100 flex flex-col items-center text-center shadow-sm hover:shadow-md transition">
+                                <div class="w-full h-28 bg-white rounded-xl mb-2 flex items-center justify-center p-2 overflow-hidden">
+                                    <img src="${escapeHtml(item.img)}" alt="${escapeHtml(item.name)}" class="max-h-full object-contain">
+                                </div>
+                                <h4 class="text-xs font-bold text-gray-800 line-clamp-1 w-full px-1">${escapeHtml(item.name)}</h4>
+                                <span class="text-[10px] text-pink-600 font-semibold uppercase mt-0.5">${escapeHtml(categoryLabels[item.category] || item.category)} · ${escapeHtml(item.color)}</span>
+                            </div>
+                        `).join('')}
+                       </div>`;
+
+                section.innerHTML = `
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="text-lg font-extrabold text-gray-900 flex items-center">
+                            <span class="w-2 h-6 bg-pink-400 rounded-full mr-2"></span>${escapeHtml(group.label)}
+                        </h4>
+                        <span class="text-[11px] font-bold bg-pink-100 text-pink-700 px-2.5 py-1 rounded-full">${group.items.length} item</span>
+                    </div>
+                    ${itemsMarkup}
+                `;
+                content.appendChild(section);
+            });
+        }
+
+        // Filter item planner (berdasarkan Style)
+        function getPlannerItems(cat) {
+            const style = document.getElementById('plannerStyle')?.value || 'all';
+            return wardrobeData.filter(item => item.category === cat &&
+                (style === 'all' || !item.style || item.style === style));
+        }
+        function onPlannerFilterChange() {
+            Object.keys(slotCleared).forEach(cat => { slotCleared[cat] = false; slotIndices[cat] = 0; });
+            updatePlannerUI();
+        }
+
+        // Save Wardrobe Item
+        function saveWardrobeItem() {
+            const name = document.getElementById('itemName').value || 'Item Baru';
+            const category = document.getElementById('itemCategory').value;
+            const color = document.getElementById('itemColor').value || 'Variatif';
+            const imgPreview = document.getElementById('imagePreview').src;
+
+            const newItem = {
+                id: Date.now(),
+                name: name,
+                category: category,
+                color: color,
+                style: document.getElementById('itemStyle')?.value || '',
+                img: imgPreview.includes('#') ? 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=300&auto=format&fit=crop' : imgPreview
+            };
+
+            wardrobeData.unshift(newItem);
+            saveState();
+            
+            showToast(`Item "${name}" berhasil ditambahkan!`);
+            
+            // Reset form
+            document.getElementById('itemName').value = '';
+            document.getElementById('itemColor').value = '';
+            document.getElementById('imagePreviewContainer').classList.add('hidden');
+            closeWardrobeModal();
+
+            renderWardrobeGrid(currentFilterCategory);
+            refreshStyleCategorizeIfOpen();
+            updatePlannerUI();
+        }
+
+        // Render Wardrobe Gallery Grid
+        function renderWardrobeGrid(category = 'all') {
+            currentFilterCategory = category;
+            const grid = document.getElementById('wardrobeGrid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            const filtered = category === 'all' 
+                ? wardrobeData 
+                : wardrobeData.filter(item => item.category === category);
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center text-gray-400 py-12 text-sm">
+                    <i class="fa-solid fa-box-open text-3xl mb-2 text-pink-300 block"></i>
+                    Belum ada koleksi di kategori ini. Silakan tambahkan foto pakaian Anda!
+                </div>`;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-pink-50/60 rounded-2xl p-3 border border-pink-100 flex flex-col items-center text-center shadow-sm hover:shadow-md transition relative group';
+                
+                card.innerHTML = `
+                    <button onclick="promptDeleteItem(${item.id}, '${item.name.replace(/'/g, "\\'")}')" class="absolute top-2 right-2 w-7 h-7 bg-white/90 hover:bg-red-500 hover:text-white text-gray-400 rounded-full flex items-center justify-center text-xs shadow transition z-10" title="Hapus Item">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                    <div class="w-full h-32 bg-white rounded-xl mb-2 flex items-center justify-center p-2 overflow-hidden">
+                        <img src="${item.img}" alt="${item.name}" class="max-h-full object-contain">
+                    </div>
+                    <h4 class="text-xs font-bold text-gray-800 line-clamp-1 w-full px-1">${item.name}</h4>
+                    <span class="text-[10px] text-pink-600 font-semibold uppercase mt-0.5">${item.color}</span>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterWardrobe(cat, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.className = 'filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition';
+            });
+            if(btn) {
+                btn.className = 'filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-pink-500 text-white transition';
+            }
+            renderWardrobeGrid(cat);
+        }
+
+        // Delete Item Prompt
+        function promptDeleteItem(id, name) {
+            pendingDeleteId = id;
+            document.getElementById('deleteModalText').innerText = `Item "${name}" akan dihapus dari koleksi lemari Anda.`;
+            document.getElementById('confirmDeleteBtn').onclick = () => executeDeleteItem(id, name);
+            document.getElementById('deleteModal').classList.remove('hidden');
+        }
+
+        function executeDeleteItem(id, name) {
+            wardrobeData = wardrobeData.filter(item => item.id !== id);
+            saveState();
+            closeDeleteModal();
+            renderWardrobeGrid(currentFilterCategory);
+            refreshStyleCategorizeIfOpen();
+            updatePlannerUI();
+            showToast(`Item "${name}" berhasil dihapus`, 'danger');
+        }
+
+        // Outfit Planner 5-Slot Switching Logic
+        function updatePlannerUI() {
             const categories = ['headwear', 'accessories', 'tops', 'bottoms', 'shoes'];
 
             categories.forEach(cat => {
-                const container = document.getElementById(`slot-${cat}`);
-                let items = wardrobe.filter(i => i.category === cat);
-                if (selectedStyle !== 'all') {
-                    items = items.filter(i => i.style === selectedStyle);
-                }
+                const items = getPlannerItems(cat);
+                const capitalizeCat = cat.charAt(0).toUpperCase() + cat.slice(1);
+                
+                const imgElem = document.getElementById(`planned${capitalizeCat}Img`);
+                const nameElem = document.getElementById(`planned${capitalizeCat}Name`);
+                if (!imgElem || !nameElem) return;
 
-                if (items.length === 0) {
-                    container.innerHTML = `<span class="text-[10px] text-gray-400">Kosong</span>`;
+                if (slotCleared[cat] || items.length === 0) {
+                    imgElem.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="%23f7a8c8" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>';
+                    nameElem.innerText = items.length === 0 ? '(Kosong)' : '(Tanpa ' + cat + ')';
                 } else {
-                    const index = (plannerIndices[cat] || 0) % items.length;
-                    const item = items[index];
-                    container.innerHTML = `
-                        <div class="text-center">
-                            <img src="${item.image}" class="h-16 w-16 object-contain mx-auto mb-1">
-                            <p class="text-[10px] font-bold text-gray-700 truncate max-w-[90px] mx-auto">${item.name}</p>
-                        </div>
-                    `;
+                    const item = items[slotIndices[cat] % items.length];
+                    imgElem.src = item.img;
+                    nameElem.innerText = item.name;
                 }
             });
         }
 
         function nextSlotItem(cat) {
-            plannerIndices[cat] = (plannerIndices[cat] || 0) + 1;
-            renderPlannerSlots();
-        }
-
-        function randomizePlanner() {
-            const selectedStyle = document.getElementById('plannerStyleFilter').value;
-            const categories = ['headwear', 'accessories', 'tops', 'bottoms', 'shoes'];
-            
-            categories.forEach(cat => {
-                let items = wardrobe.filter(i => i.category === cat);
-                if (selectedStyle !== 'all') {
-                    items = items.filter(i => i.style === selectedStyle);
-                }
-                
-                if (items.length > 0) {
-                    plannerIndices[cat] = Math.floor(Math.random() * items.length);
-                }
-            });
-            renderPlannerSlots();
-            showToast('Kombinasi berhasil diacak!');
-        }
-
-        function saveFavoriteOutfit() {
-            const outfit = {
-                id: Date.now(),
-                date: new Date().toLocaleDateString('id-ID'),
-                items: []
-            };
-
-            const selectedStyle = document.getElementById('plannerStyleFilter').value;
-            const categories = ['headwear', 'accessories', 'tops', 'bottoms', 'shoes'];
-
-            categories.forEach(cat => {
-                let items = wardrobe.filter(i => i.category === cat);
-                if (selectedStyle !== 'all') items = items.filter(i => i.style === selectedStyle);
-                if (items.length > 0) {
-                    const idx = (plannerIndices[cat] || 0) % items.length;
-                    outfit.items.push(items[idx]);
-                }
-            });
-
-            if (outfit.items.length === 0) {
-                showToast('Tidak ada item untuk disimpan!', 'error');
-                return;
+            slotCleared[cat] = false;
+            const items = getPlannerItems(cat);
+            if (items.length > 0) {
+                slotIndices[cat] = (slotIndices[cat] + 1) % items.length;
             }
-
-            favorites.unshift(outfit);
-            saveUserData();
-            showToast('Kombinasi outfit disimpan ke favorit!');
+            updatePlannerUI();
         }
 
-        function openFavoriteModal() {
-            document.getElementById('favoriteModal').classList.remove('hidden');
-            renderFavorites();
-        }
-        function closeFavoriteModal() {
-            document.getElementById('favoriteModal').classList.add('hidden');
+        function clearSlotItem(cat) {
+            slotCleared[cat] = true;
+            updatePlannerUI();
         }
 
-        function renderFavorites() {
-            const container = document.getElementById('favoritesContainer');
-            container.innerHTML = '';
-
-            if (favorites.length === 0) {
-                container.innerHTML = `<div class="col-span-full py-12 text-center text-gray-400 text-sm">Belum ada outfit favorit tersimpan.</div>`;
-                return;
-            }
-
-            favorites.forEach(fav => {
-                const card = document.createElement('div');
-                card.className = 'border border-pink-200 rounded-2xl p-4 bg-pink-50/50 relative';
-                
-                const imagesHTML = fav.items.map(item => `
-                    <div class="text-center">
-                        <img src="${item.image}" class="h-12 w-12 object-contain mx-auto bg-white rounded-lg p-1 border">
-                    </div>
-                `).join('');
-
-                card.innerHTML = `
-                    <button onclick="deleteFavorite(${fav.id})" class="absolute top-3 right-3 text-gray-400 hover:text-red-500 text-xs">
-                        <i class="fa-solid fa-trash"></i>
-                    </button>
-                    <p class="text-[11px] font-bold text-pink-600 mb-2">Saved Look - ${fav.date}</p>
-                    <div class="flex items-center justify-around">
-                        ${imagesHTML}
-                    </div>
-                `;
-                container.appendChild(card);
+        function randomizeOutfit() {
+            const categories = ['headwear', 'accessories', 'tops', 'bottoms', 'shoes'];
+            categories.forEach(cat => {
+                slotCleared[cat] = false;
+                const items = getPlannerItems(cat);
+                if (items.length > 0) {
+                    slotIndices[cat] = Math.floor(Math.random() * items.length);
+                }
             });
+            updatePlannerUI();
+            showToast('Outfit berhasil diacak!', 'info');
         }
 
-        function deleteFavorite(id) {
-            favorites = favorites.filter(f => f.id !== id);
-            saveUserData();
-            renderFavorites();
-            showToast('Outfit favorit dihapus.');
-        }
+        // --- FITUR AUTENTIKASI (SIGN IN & SIGN UP) ---
+        let isSignUpMode = false;
 
         function openAuthModal(mode = 'signin') {
-            authMode = mode;
-            document.getElementById('authModal').classList.remove('hidden');
+            isSignUpMode = (mode === 'signup');
+            const modal = document.getElementById('authModal');
             const title = document.getElementById('authModalTitle');
-            const nameGroup = document.getElementById('nameInputGroup');
+            const desc = document.getElementById('authModalDesc');
+            const nameGroup = document.getElementById('nameFieldGroup');
             const submitBtn = document.getElementById('authSubmitBtn');
-            const toggleText = document.getElementById('authToggleText');
-            const toggleBtn = document.getElementById('authToggleBtn');
+            const switchText = document.getElementById('authSwitchText');
 
-            if (mode === 'signup') {
-                title.textContent = 'Sign Up';
+            if (!modal) return;
+            modal.classList.remove('hidden');
+
+            if (isSignUpMode) {
+                title.innerText = "Buat Akun ReWear";
+                desc.innerText = "Daftar untuk menyimpan koleksi lemari digital Anda.";
                 nameGroup.classList.remove('hidden');
-                submitBtn.textContent = 'DAFTAR SEKARANG';
-                toggleText.textContent = 'Sudah punya akun?';
-                toggleBtn.textContent = 'Sign In';
+                submitBtn.innerText = "SIGN UP";
+                switchText.innerHTML = `Sudah punya akun? <button type="button" onclick="openAuthModal('signin')" class="text-pink-600 font-bold hover:underline">Sign In</button>`;
             } else {
-                title.textContent = 'Sign In';
+                title.innerText = "Sign In ke ReWear";
+                desc.innerText = "Masukkan akun Anda untuk melanjutkan.";
                 nameGroup.classList.add('hidden');
-                submitBtn.textContent = 'MASUK';
-                toggleText.textContent = 'Belum punya akun?';
-                toggleBtn.textContent = 'Daftar sekarang';
+                submitBtn.innerText = "SIGN IN";
+                switchText.innerHTML = `Belum punya akun? <button type="button" onclick="openAuthModal('signup')" class="text-pink-600 font-bold hover:underline">Sign Up</button>`;
             }
         }
 
         function closeAuthModal() {
             document.getElementById('authModal').classList.add('hidden');
+            document.getElementById('authForm').reset();
         }
 
-        function toggleAuthMode() {
-            openAuthModal(authMode === 'signin' ? 'signup' : 'signin');
-        }
+        function handleAuthSubmit(event) {
+            event.preventDefault();
 
-        function handleAuthSubmit(e) {
-            e.preventDefault();
-            const email = document.getElementById('authEmail').value.trim();
-            const password = document.getElementById('authPassword').value.trim();
-            const name = document.getElementById('authName').value.trim();
+            const identifier = document.getElementById('authIdentifier').value.trim();
+            const password = document.getElementById('authPassword').value;
+            
+            let users = JSON.parse(localStorage.getItem('rewear_users')) || [];
 
-            if (authMode === 'signup') {
-                if (users.some(u => u.email === email)) {
-                    showToast('Email sudah terdaftar!', 'error');
+            if (isSignUpMode) {
+                const name = document.getElementById('authName').value.trim();
+                
+                const existingUser = users.find(u => u.identifier === identifier);
+                if (existingUser) {
+                    alert('Email sudah terdaftar! Silakan gunakan yang lain.');
                     return;
                 }
-                const newUser = { name: name || 'User', email, password };
+
+                const newUser = { name, identifier, password };
                 users.push(newUser);
                 localStorage.setItem('rewear_users', JSON.stringify(users));
-                currentUser = newUser;
-                showToast(`Selamat datang, ${newUser.name}!`);
+
+                alert('Sign Up berhasil! Silakan Sign In dengan akun baru Anda.');
+                openAuthModal('signin');
             } else {
-                const found = users.find(u => u.email === email && u.password === password);
-                if (!found) {
-                    showToast('Email atau password salah!', 'error');
-                    return;
+                const validUser = users.find(u => u.identifier === identifier && u.password === password);
+                
+                if (validUser) {
+                    alert(`Selamat datang kembali, ${validUser.name || validUser.identifier}!`);
+                    localStorage.setItem('rewear_current_user', JSON.stringify(validUser));
+                    closeAuthModal();
+                    
+                    // Muat lemari & style khusus user (lemari kosong jika akun baru)
+                    wardrobeData = loadUserWardrobe();
+                    styleCategories = loadStyleCategories();
+                    renderStyleControls();
+                    renderWardrobeGrid('all');
+                    onPlannerFilterChange();
+                    updateNavbarAuthStatus();
+                } else {
+                    alert('Email atau Password salah!');
                 }
-                currentUser = found;
-                showToast(`Selamat datang kembali, ${found.name}!`);
             }
-
-            localStorage.setItem('rewear_current_user', JSON.stringify(currentUser));
-            closeAuthModal();
-            loadUserData();
-            renderAuthUI();
         }
 
-        function logout() {
-            currentUser = null;
-            localStorage.removeItem('rewear_current_user');
-            loadUserData();
-            renderAuthUI();
-            showToast('Anda telah logout.');
-        }
-
-        function renderAuthUI() {
+        // Cek Status Login di Navbar
+        function updateNavbarAuthStatus() {
+            const currentUser = JSON.parse(localStorage.getItem('rewear_current_user'));
             const container = document.getElementById('authNavContainer');
+
+            if (!container) return;
+
             if (currentUser) {
+                const displayName = currentUser.name || currentUser.identifier;
                 container.innerHTML = `
-                    <span class="text-xs font-bold text-pink-600">Halo, ${currentUser.name}</span>
-                    <button onclick="logout()" class="px-3 py-1.5 text-xs font-bold bg-gray-200 text-gray-800 rounded-full hover:bg-gray-300 transition">
-                        Logout
-                    </button>
+                    <div class="flex items-center space-x-3 bg-pink-50 border border-pink-200 px-3 py-1.5 rounded-full shadow-sm">
+                        <div class="w-7 h-7 bg-pink-600 text-white rounded-full flex items-center justify-center font-bold text-xs">
+                            ${displayName.charAt(0).toUpperCase()}
+                        </div>
+                        <span class="text-xs font-bold text-gray-800">Halo, ${displayName}</span>
+                        <button onclick="handleLogout()" class="text-xs text-red-500 hover:text-red-700 font-bold ml-2 transition" title="Logout">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </button>
+                    </div>
                 `;
             } else {
                 container.innerHTML = `
@@ -1135,21 +1469,28 @@
             }
         }
 
-        function openWardrobeModal() {
-            document.getElementById('wardrobeModal').classList.remove('hidden');
-            renderStyleCategories();
+        // Fungsi Logout yang membersihkan lemari pribadi & kembali ke mode demo
+        function handleLogout() {
+            localStorage.removeItem('rewear_current_user');
+            wardrobeData = [...initialWardrobeData]; 
+            styleCategories = loadStyleCategories();
+            renderStyleControls();
+            renderWardrobeGrid('all');
+            onPlannerFilterChange();
+            updateNavbarAuthStatus();
+            closeStyleCategorizeModal();
+            showToast('Berhasil keluar. Kembali ke mode demo.', 'info');
         }
-        function closeWardrobeModal() {
-            document.getElementById('wardrobeModal').classList.add('hidden');
-        }
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        }
-        function toggleAccessoryTypeHint(val) {
-            const hint = document.getElementById('accessoryHint');
-            if (val === 'accessories') hint.classList.remove('hidden');
-            else hint.classList.add('hidden');
-        }
+
+        // Initializer saat halaman dimuat
+        window.onload = function() {
+            wardrobeData = loadUserWardrobe();
+            styleCategories = loadStyleCategories();
+            renderStyleControls();
+            renderWardrobeGrid('all');
+            updatePlannerUI();
+            updateNavbarAuthStatus();
+        };
     </script>
 </body>
 </html>
