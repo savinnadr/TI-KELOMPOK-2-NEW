@@ -458,7 +458,6 @@
                             <option value="accessories">Aksesoris (Accessories)</option>
                             <option value="tops">Atasan (Tops)</option>
                             <option value="bottoms">Bawahan (Bottoms)</option>
-                            <option value="dresses">Dress / One Piece</option>
                             <option value="shoes">Sepatu / Alas Kaki</option>
                         </select>
                     </div>
@@ -513,7 +512,6 @@
                 <button onclick="filterWardrobe('accessories', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Aksesoris</button>
                 <button onclick="filterWardrobe('tops', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Atasan</button>
                 <button onclick="filterWardrobe('bottoms', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Bawahan</button>
-                <button onclick="filterWardrobe('dresses', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Dress</button>
                 <button onclick="filterWardrobe('shoes', this)" class="filter-btn px-4 py-1.5 rounded-full text-xs font-bold bg-gray-100 text-gray-600 hover:bg-pink-100 transition">Sepatu</button>
             </div>
 
@@ -753,11 +751,8 @@
             { id: 5, name: 'Flared Jeans', category: 'bottoms', color: 'Black', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_21.51.28_1.jpg' },
             { id: 6, name: 'USA Jeans', category: 'bottoms', color: 'Mix', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_21.53.38.jpg' },
             
-            // Dresses
-            { id: 7, name: 'Polkadot Dress', category: 'dresses', color: 'Blue', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/WhatsApp_Image_2026-11-02_at_22.31.46.jpg' },
-            
             // Shoes
-            { id: 8, name: 'Chunky Loafers', category: 'shoes', color: 'Black', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/__%EF%BE%9F___%EF%BE%9F.jpg' }
+            { id: 7 name: 'Chunky Loafers', category: 'shoes', color: 'Black', img: 'https://res.cloudinary.com/ntpfvuih/image/upload/f_auto/q_auto/__%EF%BE%9F___%EF%BE%9F.jpg' }
         ];
 
         // Ambil kunci unik berdasarkan akun user yang sedang login
@@ -1122,7 +1117,6 @@
                 accessories: 'Aksesoris',
                 tops: 'Atasan',
                 bottoms: 'Bawahan',
-                dresses: 'Dress',
                 shoes: 'Sepatu'
             };
 
